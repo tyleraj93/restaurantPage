@@ -21,7 +21,7 @@ export default function buildHome(location) {
     // Name section
     const titleHolder = document.createElement("div");
     const restaurantName = document.createElement("h1");
-    restaurantName.textContent = "Loki's Lounge";
+    restaurantName.textContent = "Loki's Lair";
     titleHolder.appendChild(restaurantName);
     location.appendChild(titleHolder);
 
