@@ -1,4 +1,5 @@
 import buildHome from "./home";
+import buildMenu from "./menu";
 
 //Builds a header with 3 buttons before a given "location" parameter.
 export default function buildHeaderBefore(location) {
@@ -15,6 +16,7 @@ export default function buildHeaderBefore(location) {
     const menuButton = document.createElement("button");
     menuButton.textContent = "Menu";
     menuButton.classList.add("navButton");
+    menuButton.addEventListener("click", () => buildMenu(location));
     header.appendChild(menuButton);
 
     const contactButton = document.createElement("button");
