@@ -1,6 +1,11 @@
+import clearContent from "./clearContent";
+
 // Build a home section in a given parameter
 
 export default function buildHome(location) {
+    if (location.textContent) {
+        clearContent(location);
+    };
     // Name section
     const nameHolder = document.createElement("div");
     const restaurantName = document.createElement("h1");
