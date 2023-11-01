@@ -7,11 +7,11 @@ export default function buildHome(location) {
         clearContent(location);
     };
     // Name section
-    const nameHolder = document.createElement("div");
+    const titleHolder = document.createElement("div");
     const restaurantName = document.createElement("h1");
     restaurantName.textContent = "Loki's Lounge";
-    nameHolder.appendChild(restaurantName);
-    location.appendChild(nameHolder);
+    titleHolder.appendChild(restaurantName);
+    location.appendChild(titleHolder);
 
     // Review section
     const reviewHolder = document.createElement("div");
