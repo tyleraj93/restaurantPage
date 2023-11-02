@@ -1,6 +1,7 @@
 export default function buildFooter() {
     const body = document.body;
     const footerHolder = document.createElement("div");
+    footerHolder.id = "footer";
     const corp = document.createElement("p");
     corp.textContent = "Odin's Hospitality Group";
     footerHolder.appendChild(corp);
