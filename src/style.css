@@ -1,0 +1,119 @@
+/* Roboto Regular */
+@font-face {
+    font-family: "Roboto";
+    src: url(./fonts/roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Roboto Bold */
+@font-face {
+    font-family: "Roboto";
+    src: url(./fonts/roboto/Roboto-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Roboto Italic */
+@font-face {
+    font-family: "Roboto";
+    src: url(./fonts/roboto/Roboto-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Stick Plan Regular */
+@font-face {
+    font-family: "stickPlan";
+    src: url(./fonts/stickPlan/StickplanDemo-DOELx.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --misty-blue: #AABECE;
+    --snowy-white: #EDEEF2;
+    --deep-lake-blue: #4A6979;
+    --mountain-gray: #6B7D90;
+    --deer-brown: #8B6F5E;
+    --forest-pine: #3D5057;
+    --golden-grass: #C5A57F;
+}
+
+* {
+    font-family: "Roboto";
+    margin: 0;
+    color: var(--snowy-white);
+}
+
+body {
+    background: url("./images/background.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    gap: 50px;
+    justify-items: center;
+
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    gap: 0 166px;
+    padding-top: 15px;
+}
+
+#header button {
+    width: 8vw;
+    height: 6vh;
+    border-radius: 15px;
+    border: 2px solid darkslategrey;
+    background-color: var(--mountain-gray);
+    color: var(--golden-grass);
+    font-family: "stickPlan";
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    width: 45vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+    justify-items: center;
+    text-align: center;
+    background-color: var(--forest-pine);
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid darkslategrey;
+}
+
+h1 {
+    font-family: "stickPlan", "Roboto";
+    font-size: 80px;
+    color: var(--golden-grass);
+}
+
+h2 {
+
+}
+
+#footer {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--mountain-gray);
+}
+
+#footer p {
+    font-size: 18px;
+}
