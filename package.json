@@ -19,7 +19,7 @@
     "bugs": {
         "url": "https://github.com/tyleraj93/restaurantPage/issues"
     },
-    "homepage": "https://github.com/tyleraj93/restaurantPage#readme",
+    "homepage": "https://github.com/tyleraj93/restaurantPage/",
     "devDependencies": {
         "css-loader": "^6.8.1",
         "html-webpack-plugin": "^5.5.3",
