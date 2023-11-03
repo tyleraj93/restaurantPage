@@ -1,4 +1,5 @@
 import clearContent from "./clearContent";
+import outside from "./images/outside.png";
 
 const buildHours = (day, time, placement) => {
     const hours = document.createElement("p");
@@ -17,6 +18,14 @@ export default function buildAbout(location) {
     title.textContent = "About us";
     titleHolder.appendChild(title);
     location.appendChild(titleHolder);
+
+    // Outside restaurant image
+    const imageHolder = document.createElement("div");
+    const restaurantOutside = document.createElement("img");
+    restaurantOutside.src = outside;
+    restaurantOutside.classList = "restaurantImage";
+    imageHolder.appendChild(restaurantOutside);
+    location.appendChild(imageHolder);
 
     // Number Section
     const numberHolder = document.createElement("div");
