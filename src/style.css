@@ -83,7 +83,7 @@ body {
 }
 
 #content {
-    width: 45vw;
+    width: 57vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -93,12 +93,12 @@ body {
     background-color: var(--forest-pine);
     padding: 15px;
     border-radius: 15px;
-    border: 12px solid var(--golden-grass);
+    border: 12px outset var(--golden-grass);
 }
 
 h1 {
     font-family: "stickPlan", "Roboto";
-    font-size: 80px;
+    font-size: 90px;
     color: var(--golden-grass);
 }
 
@@ -142,4 +142,9 @@ p {
 
 .itemImage {
     width: 20vw;
+}
+
+img {
+    border-radius: 5px;
+    border: 5px outset var(--golden-grass);
 }
