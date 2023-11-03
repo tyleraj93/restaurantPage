@@ -1,15 +1,19 @@
 import clearContent from "./clearContent";
+import inside from "./images/inside.png";
 
 const buildReview = (reviewer, score, remarks, placement) => {
+    const holder = document.createElement("div");
+    holder.className = "review";
     const name = document.createElement("p");
     name.textContent = reviewer;
-    placement.appendChild(name);
+    holder.appendChild(name);
     const rating = document.createElement("p");
     rating.textContent = "⭐".repeat(score);
-    placement.appendChild(rating);
+    holder.appendChild(rating);
     const review = document.createElement("p");
     review.textContent = remarks;
-    placement.appendChild(review);
+    holder.appendChild(review);
+    placement.appendChild(holder);
 }
 
 // Build a home section in a given parameter
@@ -24,6 +28,14 @@ export default function buildHome(location) {
     restaurantName.textContent = "Loki's Lair";
     titleHolder.appendChild(restaurantName);
     location.appendChild(titleHolder);
+
+    // Image of restaurant inside
+    const imageHolder = document.createElement("div");
+    const restaurantInside = document.createElement("img");
+    restaurantInside.src = inside;
+    restaurantInside.classList = "restaurantImage";
+    imageHolder.appendChild(restaurantInside);
+    location.appendChild(imageHolder);
 
     // Bio Section
     const bioHolder = document.createElement("div");
