@@ -16,7 +16,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ buildFooter)\n/* harmony export */ });\nfunction buildFooter() {\n    const body = document.body;\n    const footerHolder = document.createElement(\"div\");\n    const corp = document.createElement(\"p\");\n    corp.textContent = \"Odin's Hospitality Group\";\n    footerHolder.appendChild(corp);\n    const company = document.createElement(\"p\");\n    company.textContent = \"Loki's Lair\";\n    footerHolder.appendChild(company);\n    body.appendChild(footerHolder);\n}\n\n//# sourceURL=webpack://restaurantpage/./src/footer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ buildFooter)\n/* harmony export */ });\nfunction buildFooter() {\n    const body = document.body;\n    const footerHolder = document.createElement(\"div\");\n    footerHolder.id = \"footer\";\n    const corp = document.createElement(\"p\");\n    corp.textContent = \"Odin's Hospitality Group\";\n    footerHolder.appendChild(corp);\n    const company = document.createElement(\"p\");\n    company.textContent = \"Loki's Lair\";\n    footerHolder.appendChild(company);\n    body.appendChild(footerHolder);\n}\n\n//# sourceURL=webpack://restaurantpage/./src/footer.js?");
 
 /***/ })
 
