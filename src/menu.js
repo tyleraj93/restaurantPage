@@ -1,7 +1,14 @@
 import clearContent from "./clearContent";
+import oraclesImg from "./images/odinsOracles.png"
+import breadsImg from "./images/bread.png";
+import lokisImg from "./images/lokisTrick.png";
+import muleImg from "./images/mjolnirMule.png";
+import triffleImg from "./images/triffle.png";
+import rouladeImg from "./images/roulade.png";
 
 const buildItem = (name, description, placement) => {
     const item = document.createElement("div");
+    item.className = "item";
     const itemName = document.createElement("h3");
     itemName.textContent = name;
     item.appendChild(itemName);
@@ -10,6 +17,15 @@ const buildItem = (name, description, placement) => {
     item.appendChild(itemDescription);
     placement.appendChild(item);
 };
+    
+const buildImage = (imageSource, location) => {
+    const imageHolder = document.createElement("div");
+    const itemImage = document.createElement("img");
+    itemImage.src = imageSource
+    itemImage.classList = "itemImage";
+    imageHolder.appendChild(itemImage);
+    location.appendChild(imageHolder);
+}
 
 export default function buildMenu(location) {
     if (location.textContent) {
@@ -28,6 +44,7 @@ export default function buildMenu(location) {
     const appetizer = document.createElement("h2");
     appetizer.textContent = "Beginnings";
     appetizerHolder.appendChild(appetizer);
+    const oraclesImage = buildImage(oraclesImg, appetizerHolder);
     const oracles = buildItem(
         "Odin's Oracles",
         "A platter of mini salmon and dill tarts, served with a side of rye crisps.",
@@ -43,6 +60,7 @@ export default function buildMenu(location) {
         "Wild mushroom and leek soup, drizzled with truffle oil.",
         appetizerHolder
     );
+    const breadsImage = buildImage(breadsImg, appetizerHolder);
     const breads = buildItem(
         "Heimdall's Hearth Breads",
         "Selection of fresh baked Nordic bread, served with whipped butter infused with herbs and sea salt.",
@@ -60,6 +78,7 @@ export default function buildMenu(location) {
     const drink = document.createElement("h2");
     drink.textContent = "Elixirs";
     drinkHolder.appendChild(drink);
+    const muleImage = buildImage(muleImg, drinkHolder);
     const mule = buildItem(
         "Mjölnir Mule",
         "A Norse twist on the classic, with aquavit, ginger beer, and fresh lime, garnished with a sprig of rosemary.",
@@ -80,6 +99,7 @@ export default function buildMenu(location) {
         "A vibrant cocktail representing the rainbow bridge, layered with blue curaçao, grenadine, and orange juice.",
         drinkHolder
     );
+    const trickImage = buildImage(lokisImg, drinkHolder);
     const trick = buildItem(
         "Loki's Trick",
         "A mysterious, smoky cocktail with mezcal, blackberries, and a hint of mint.",
@@ -92,6 +112,7 @@ export default function buildMenu(location) {
     const dessert = document.createElement("h2");
     dessert.textContent = "Sweet Finishes";
     dessertHolder.appendChild(dessert);
+    const triffleImage = buildImage(triffleImg, dessertHolder);
     const triffle = buildItem(
         "Yggdrasil Trifle",
         "Layers of sponge cake, berry compote, and rich cream, representing the layers of the World Tree.",
@@ -112,6 +133,7 @@ export default function buildMenu(location) {
         "Icy lemon and berry sorbet orbs, served in a chilled bowl.",
         dessertHolder
     );
+    const rouladeImage = buildImage(rouladeImg, dessertHolder);
     const roulade = buildItem(
         "Ragnarok Roulade",
         "A decadent chocolate roulade filled with cherry and whipped cream, symbolizing the end of the world's indulgence.",
