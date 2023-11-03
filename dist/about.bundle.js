@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ buildAbout)\n/* harmony export */ });\n/* harmony import */ var _clearContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clearContent */ \"./src/clearContent.js\");\n\n\nconst buildHours = (day, time, placement) => {\n    const hours = document.createElement(\"p\");\n    hours.textContent = `${day}: ${time}`;\n    placement.appendChild(hours);\n}\n\nfunction buildAbout(location) {\n    if (location.textContent) {\n        (0,_clearContent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(location);\n    }\n\n    // Title section\n    const titleHolder = document.createElement(\"div\");\n    const title = document.createElement(\"h1\");\n    title.textContent = \"About us\";\n    titleHolder.appendChild(title);\n    location.appendChild(titleHolder);\n\n    // Number Section\n    const numberHolder = document.createElement(\"div\");\n    const number = document.createElement(\"h2\");\n    number.textContent = \"Phone Number: \"\n    numberHolder.appendChild(number);\n    const phone = document.createElement(\"p\");\n    phone.textContent = \"666-555-4444\";\n    numberHolder.appendChild(phone);\n    location.appendChild(numberHolder);\n\n    // Hours section\n    const hoursHolder = document.createElement(\"div\");\n    const hours = document.createElement(\"h2\");\n    hours.textContent = \"Hours\";\n    hoursHolder.appendChild(hours);\n    const sunday = buildHours(\"Sunday\" , \"4pm - 10pm\", hoursHolder);\n    const monday = buildHours(\"Monday\", \"6pm - 12am\", hoursHolder);\n    const tuesday = buildHours(\"Tuesday\", \"6pm - 12am\", hoursHolder);\n    const wednesday = buildHours(\"Wednesday\", \"6pm - 12am\", hoursHolder);\n    const thursday = buildHours(\"Thurday\", \"6pm - 12am\", hoursHolder);\n    const friday = buildHours(\"Friday\", \"6pm - 2am\", hoursHolder);\n    const saturday = buildHours(\"Saturday\", \"4pm - 2am\", hoursHolder);\n    location.appendChild(hoursHolder);\n\n    // Location section, not the parameter\n    const locationHolder = document.createElement(\"div\");\n    const locationText = document.createElement(\"h2\");\n    locationText.textContent = \"Location\";\n    locationHolder.appendChild(locationText);\n    const address = document.createElement(\"p\");\n    address.innerHTML =\n        \"Asgardian Plaza, <br>Valhalla Avenue, <br>Midgard District, <br>Thornton, <br>Norsewood, <br>9X4 2YZ <br>Realm of Legends, Northern Isles\";\n    locationHolder.appendChild(address);\n    location.appendChild(locationHolder);\n}\n\n//# sourceURL=webpack://restaurantpage/./src/about.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ buildAbout)\n/* harmony export */ });\n/* harmony import */ var _clearContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clearContent */ \"./src/clearContent.js\");\n/* harmony import */ var _images_outside_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/outside.png */ \"./src/images/outside.png\");\n\n\n\nconst buildHours = (day, time, placement) => {\n    const hours = document.createElement(\"p\");\n    hours.textContent = `${day}: ${time}`;\n    placement.appendChild(hours);\n}\n\nfunction buildAbout(location) {\n    if (location.textContent) {\n        (0,_clearContent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(location);\n    }\n\n    // Title section\n    const titleHolder = document.createElement(\"div\");\n    const title = document.createElement(\"h1\");\n    title.textContent = \"About us\";\n    titleHolder.appendChild(title);\n    location.appendChild(titleHolder);\n\n    // Outside restaurant image\n    const imageHolder = document.createElement(\"div\");\n    const restaurantOutside = document.createElement(\"img\");\n    restaurantOutside.src = _images_outside_png__WEBPACK_IMPORTED_MODULE_1__;\n    restaurantOutside.classList = \"restaurantImage\";\n    imageHolder.appendChild(restaurantOutside);\n    location.appendChild(imageHolder);\n\n    // Number Section\n    const numberHolder = document.createElement(\"div\");\n    const number = document.createElement(\"h2\");\n    number.textContent = \"Phone Number: \"\n    numberHolder.appendChild(number);\n    const phone = document.createElement(\"p\");\n    phone.textContent = \"666-555-4444\";\n    numberHolder.appendChild(phone);\n    location.appendChild(numberHolder);\n\n    // Hours section\n    const hoursHolder = document.createElement(\"div\");\n    const hours = document.createElement(\"h2\");\n    hours.textContent = \"Hours\";\n    hoursHolder.appendChild(hours);\n    const sunday = buildHours(\"Sunday\" , \"4pm - 10pm\", hoursHolder);\n    const monday = buildHours(\"Monday\", \"6pm - 12am\", hoursHolder);\n    const tuesday = buildHours(\"Tuesday\", \"6pm - 12am\", hoursHolder);\n    const wednesday = buildHours(\"Wednesday\", \"6pm - 12am\", hoursHolder);\n    const thursday = buildHours(\"Thurday\", \"6pm - 12am\", hoursHolder);\n    const friday = buildHours(\"Friday\", \"6pm - 2am\", hoursHolder);\n    const saturday = buildHours(\"Saturday\", \"4pm - 2am\", hoursHolder);\n    location.appendChild(hoursHolder);\n\n    // Location section, not the parameter\n    const locationHolder = document.createElement(\"div\");\n    const locationText = document.createElement(\"h2\");\n    locationText.textContent = \"Location\";\n    locationHolder.appendChild(locationText);\n    const address = document.createElement(\"p\");\n    address.innerHTML =\n        \"Asgardian Plaza, <br>Valhalla Avenue, <br>Midgard District, <br>Thornton, <br>Norsewood, <br>9X4 2YZ <br>Realm of Legends, Northern Isles\";\n    locationHolder.appendChild(address);\n    location.appendChild(locationHolder);\n}\n\n//# sourceURL=webpack://restaurantpage/./src/about.js?");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ clearContent)\n/* harmony export */ });\nfunction clearContent(location) {\n    if (location.textContent) {\n        location.textContent = \"\";\n    }\n}\n\n//# sourceURL=webpack://restaurantpage/./src/clearContent.js?");
+
+/***/ }),
+
+/***/ "./src/images/outside.png":
+/*!********************************!*\
+  !*** ./src/images/outside.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"f8f73f404476a814f6bb.png\";\n\n//# sourceURL=webpack://restaurantpage/./src/images/outside.png?");
 
 /***/ })
 
@@ -69,6 +79,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -83,6 +105,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
